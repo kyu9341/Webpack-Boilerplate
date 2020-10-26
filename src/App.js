@@ -1,15 +1,14 @@
-class App {
-  constructor($root) {
-    this.$root = $root;
+import React from "react";
+import ReactDom from "react-dom";
 
-    this.render();
-  }
-
-  async render() {
-    this.$root.innerHTML = `
-    <h1> Hello World! </h1>
-    `;
-  }
-}
+const App = () => {
+  return (
+    <div>
+      <p>React here!</p>
+    </div>
+  );
+};
 
 export default App;
+
+ReactDom.render(<App />, document.querySelector("#root"));

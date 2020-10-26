@@ -10,6 +10,9 @@ module.exports = function (api) {
                 "corejs" : "3",
                 "modules": false
             }
+        ],
+        [
+            "@babel/preset-react",
         ]
      ];
 

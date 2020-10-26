@@ -15,7 +15,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
@@ -53,6 +53,11 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
     ],
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, 'src'),
+          },
+    },
     devServer: {
         port: 8080,
         historyApiFallback: false,
