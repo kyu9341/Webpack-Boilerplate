@@ -1,5 +1,5 @@
-import React from "react";
-import ReactDom from "react-dom";
+import React from 'react';
+import ReactDom from 'react-dom';
 
 const App = () => {
   return (
@@ -11,4 +11,4 @@ const App = () => {
 
 export default App;
 
-ReactDom.render(<App />, document.querySelector("#root"));
+ReactDom.render(<App />, document.querySelector('#root'));

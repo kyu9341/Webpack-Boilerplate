@@ -1,2 +1,2 @@
-import App from "./App";
-import "./App.scss";
+import App from './App';
+import './App.scss';
