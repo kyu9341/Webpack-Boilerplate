@@ -1,4 +1,4 @@
-module.exports = function (api) {
+module.exports = api => {
   api.cache(true);
 
   const presets = [
@@ -12,6 +12,7 @@ module.exports = function (api) {
       },
     ],
     ['@babel/preset-react'],
+    ['@babel/preset-typescript'],
   ];
 
   const plugins = [

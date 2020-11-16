@@ -1,21 +1,19 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  devtool: 'cheap-module-source-map',
-  mode: 'development',
   entry: {
-    main: './src/index.js',
+    main: './src/index.tsx',
   },
   output: {
-    path: path.resolve('./dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -57,9 +55,6 @@ module.exports = {
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
-  },
-  devServer: {
-    port: 8080,
-    historyApiFallback: false,
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
 };
