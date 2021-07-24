@@ -8,6 +8,13 @@ module.exports = function (api) {
     ['@babel/plugin-proposal-private-methods', { loose: true }],
     ['@babel/plugin-transform-async-to-generator'],
     ['@babel/plugin-transform-runtime'],
+    [
+      'babel-plugin-styled-components',
+      {
+        ssr: true,
+        displayName: true,
+      },
+    ],
   ];
 
   return {

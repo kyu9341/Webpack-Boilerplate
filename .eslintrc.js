@@ -18,7 +18,9 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  rules: {},
+  rules: {
+    'no-useless-catch': 'off',
+  },
   settings: {
     jest: {
       version: 26,

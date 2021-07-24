@@ -1,5 +1,16 @@
 import Head from 'next/head';
+import styled from 'styled-components';
 import styles from '../styles/Home.module.css';
+
+const H1 = styled.h1`
+  color: red;
+`;
+
+const Container = styled.div`
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+`;
 
 export default function Home() {
   return (
@@ -8,7 +19,9 @@ export default function Home() {
         <title>Next.js Boilerplate</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Hello World!</h1>
+      <Container>
+        <H1>Hello World!</H1>
+      </Container>
     </div>
   );
 }
