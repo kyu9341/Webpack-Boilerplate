@@ -8,20 +8,23 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:prettier/recommended',
-    'plugin:jest/recommended',
     'plugin:react/recommended',
     'next',
     'next/core-web-vitals',
   ],
-  parser: 'babel-eslint',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  rules: {},
+  rules: {
+    'no-useless-catch': 'off',
+    'react/display-name': 'off',
+    'no-unused-vars': ['warn', { vars: 'all' }],
+  },
   settings: {
     jest: {
-      version: 26,
+      version: 27,
     },
   },
 };
